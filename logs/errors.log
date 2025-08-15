@@ -1,10 +1,6 @@
-2025-08-15 16:23:12,656 - WARNING -  * Debugger is active!
-2025-08-15 16:23:12,659 - INFO -  * Debugger PIN: 102-608-971
-2025-08-15 16:23:16,247 - INFO - 127.0.0.1 - - [15/Aug/2025 16:23:16] "GET / HTTP/1.1" 200 -
-2025-08-15 16:23:35,982 - INFO - Cookie accept
-2025-08-15 16:23:39,215 - INFO - Success in search keyword
-2025-08-15 16:24:09,221 - ERROR - Solved! Page.wait_for_selector: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator("//*[@id='cookie-banner']/div/div[2]/a") to be visible
-
-2025-08-15 16:24:10,233 - INFO - 127.0.0.1 - - [15/Aug/2025 16:24:10] "POST / HTTP/1.1" 200 -
+2025-08-15 16:34:09,976 - WARNING -  * Debugger is active!
+2025-08-15 16:34:09,979 - INFO -  * Debugger PIN: 102-608-971
+2025-08-15 16:34:15,923 - INFO - 127.0.0.1 - - [15/Aug/2025 16:34:15] "GET / HTTP/1.1" 200 -
+2025-08-15 16:34:35,427 - INFO - Successfuly search the automation
+2025-08-15 16:34:40,530 - INFO - Locate the selector jobs post
+2025-08-15 16:34:43,188 - INFO - 127.0.0.1 - - [15/Aug/2025 16:34:43] "POST / HTTP/1.1" 200 -

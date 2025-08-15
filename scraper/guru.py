@@ -28,7 +28,7 @@ def scrape(keyword):
         except:
             logging.error("Cookie btn not found")
         try:
-            search_input=page.wait_for_selector("input[id='typeahead-34']")
+            search_input=page.wait_for_selector("input[id='typeahead-32']")
             search_input.fill(keyword)
             search_input.press("Enter")
             logging.info(f"Search for {keyword}")

@@ -50,9 +50,9 @@ def scrape(keyword):
                 except:
                     price="N/A"
                 all_jobs.append({
-                    "title":title,
-                    "url":job_url,
-                    "price":price
+                    "Job Title":title,
+                    "Price":price,
+                    "URL":url
                 })
     
     if all_jobs:
