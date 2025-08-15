@@ -1,7 +1,7 @@
 # 🔍 Smart Job Finder  
 **Aggregate freelance jobs from multiple platforms with one click!**  
 
-![Dashboard](https://via.placeholder.com/800x400/1a2a6c/ffffff?text=Job+Scraper+Dashboard)  
+![Dashboard](images/image.png)  
 
 ## 🚀 Quick Start  
 1. Clone repository:  
