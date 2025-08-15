@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Scraper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        select, input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .job-card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .job-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .job-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .job-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .no-jobs {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .platform-name {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Scraper</h1>
+        
+        <form method="POST">
+            <div class="form-group">
+                <select name="site">
+                    <option value="guru">Guru</option>
+                    <option value="pph">PeoplePerHour</option>
+                    <option value="freelancer">Freelancer</option>
+                </select>
+                
+                <input type="text" name="keyword" placeholder="Enter job keyword" required>
+                
+                <button type="submit">Search Jobs</button>
+            </div>
+        </form>
+        
+        {% if platform %}
+            <div class="platform-name">
+                Showing results for <strong>{{ platform }}</strong>
+            </div>
+        {% endif %}
+        
+        <div id="results">
+            {% if jobs %}
+                {% for job in jobs %}
+                    <div class="job-card">
+                        <h3>{{ job['Job Title'] }}</h3>
+                        <p><strong>Price:</strong> {{ job['Price'] }}</p>
+                        <a href="{{ job['URL'] }}" target="_blank">View Job</a>
+                    </div>
+                {% endfor %}
+            {% elif platform %}
+                <div class="no-jobs">No jobs found for this search</div>
+            {% else %}
+                <div class="no-jobs">Select a platform and enter keyword to search</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
